@@ -1,0 +1,164 @@
+.wrapper {
+   max-width: 100%;
+   margin: 0 auto;
+}
+
+.header {
+   background-color: #011D22;
+   padding: 0px 110px;
+}
+
+.header__container {
+   // max-width: 1060px;
+   width: 100%;
+   margin: 0 auto;
+}
+
+.header__content,
+.header__block-left {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 80px;
+}
+
+.header__title {
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 22px;
+   letter-spacing: 0.05em;
+   text-transform: uppercase;
+   color: #D0FFF7;
+}
+
+.header__menu {
+   width: 55px;
+   height: 55px;
+   position: relative;
+
+   img {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+   }
+}
+
+.header__search-lang {
+   font-weight: 400;
+   font-size: 15px;
+   line-height: 18px;
+   padding: 9px 21px;
+   margin: 0 65px;
+
+   background: rgba(0, 0, 0, 0.34);
+   backdrop-filter: blur(10px);
+   border-radius: 3px;
+}
+
+.header__menu {
+   z-index: 5;
+   display: block;
+   position: relative;
+   width: 26px;
+   height: 20px;
+   cursor: pointer;
+
+   & span,
+   &::before,
+   &::after {
+      left: 0;
+      position: absolute;
+      height: 3.33px;
+      width: 100%;
+      transition: all .3s ease 0s;
+      background-color: #D1EBE5;
+      border-radius: 1px;
+   }
+
+   &::before,
+   &::after {
+      content: "";
+   }
+
+   &::before {
+      top: 0;
+   }
+
+   &::after {
+      bottom: 0;
+   }
+
+   & span {
+      top: 50%;
+      transform: scale(1) translate(0px, -50%);
+   }
+}
+
+.section__tabs {
+   background-color: #03262D;
+}
+
+.tabs__items {
+   display: flex;
+   align-items: center;
+
+
+   .tabs__item {
+      padding: 0 17px 0 23px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+
+
+
+      & p {
+         position: relative;
+         z-index: 2;
+         font-weight: 400;
+         font-size: 18px;
+         line-height: 22px;
+         letter-spacing: 0.05em;
+      }
+
+      .tab__close {
+         padding: 0 0 0 20px;
+      }
+
+      &.active {
+         background-color: #072328;
+         border-radius: 5px 5px 0 0;
+      }
+   }
+
+   .tab__create {
+      font-size: 25px;
+      line-height: 50%;
+      padding: 6px;
+      background: #011D22;
+      border-radius: 5px;
+      margin: 0 10px;
+   }
+}
+
+.tabs__content {
+   .tabs__block {
+      height: calc(100vh - 130px);
+      position: relative;
+      display: none;
+      padding: 20px;
+      flex: 18;
+      line-height: 24px;
+      background-color: #072328;
+
+      &:target {
+         display: block;
+      }
+   }
+}
+
+// 
