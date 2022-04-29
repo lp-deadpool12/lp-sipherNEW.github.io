@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="Sass/css/null.css">
+    <link rel="stylesheet" href="Sass/css/codeStyle.css">
+    <link rel="stylesheet" href="plugins/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="plugins/codemirror/theme/ayu-dark.css">
+    <link rel="stylesheet" href="plugins/codemirror/addon/hint/show-hint.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <title>LP cipher</title>
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="container header__body">
+            <p class="header_title"><a href="index.html">LP CIPHER 1.0</a></p>
+            <img src="img/logotype.svg" alt="" class="logo">
+            <div class="btn-wrapper">
+                <button class="lang-mode-btn">
+                    <p class="lang_mode">JavaScript</p>
+
+                </button>
+                <div id="settingsMenuBtn" class="settingsMenuBtn">
+                    <span></span>
+                    <span style="margin: 5px 0px 5px;"></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="find-prog-lang find-prog-lang__disable">
+            <div class="find-prog-lang__header">
+                <div class="find-prog-lang__cross">&#10005</div>
+                <div class="find-prog-lang__search">
+                    <div class="find-prog-lang__search-icon"></div>
+                    <input class="find-prog-lang__input"  type="text">
+                </div>
+            </div>
+           <div class="find-prog-lang__body">
+            <ul class="find-prog-lang__lang-list">
+                <li>APL</li>
+                <li>ASN.1</li>
+                <li>Asterisk dialplan</li>
+                <li>Brainfuck</li>
+                <li>C, C++, C#</li>
+                <li>Ceylon</li>
+                <li>Clojure</li>
+                <li>Closure Stylesheets</li>
+                <li>CMake</li>
+                <li>COBOL</li>
+                <li>CoffeeScript</li>
+                <li>Common Lisp</li>
+                <li>Crystal</li>
+                <li>CSS</li>
+                <li>Cypher</li>
+                <li>Cython</li>
+                <li>D</li>
+                <li>Dart</li>
+                <li>Django</li>
+                <li>Dockerfile</li>
+                <li>diff</li>
+                <li>DTD</li>
+                <li>Dylan</li>
+                <li>EBNF</li>
+                <li>ECL</li>
+                <li>Eiffel</li>
+                <li>Elixir</li>
+                <li>Elm</li>
+                <li>Erlang</li>
+                <li>Factor</li>
+                <li>FCL</li>
+                <li>Forth</li>
+                <li>Fortran</li>
+                <li>F#</li>
+                <li>Gas</li>
+                <li>Gherkin</li>
+                <li>Go</li>
+                <li>Groovy</li>
+                <li>HAML</li>
+                <li>Handlebars</li>
+                <li>Haskell (Literate)</li>
+                <li>Haxe</li>
+                <li>HTML</li>
+                <li>HTML mixed-mode</li>
+                <li>HTTP</li>
+                <li>IDL</li>
+                <li>Java</li>
+                <li>JavaScript (JSX)</li>
+                <li>Jinja2</li>
+                <li>Julia</li>
+                <li>Kotlin</li>
+                <li>LESS</li>
+                <li>LiveScript</li>
+                <li>Lua</li>
+                <li>Markdown (GitHub-flavour)</li>
+                <li>Mathematica</li>
+                <li>mbox</li>
+                <li>mIRC</li>
+                <li>Modelica</li>
+                <li>MscGen</li>
+                <li>MUMPS</li>
+                <li>Nginx</li>
+                <li>NSIS</li>
+                <li>N-Triples/N-Quads</li>
+                <li>Objective C</li>
+                <li>OCaml</li>
+                <li>Octave (MATLAB)</li>
+                <li>Oz</li>
+                <li>Pascal</li>
+                <li>PEG.js</li>
+                <li>Perl</li>
+                <li>PGP (ASCII armor)</li>
+                <li>PHP</li>
+                <li>Pig Latin</li>
+                <li>PowerShell</li>
+                <li>Properties files</li>
+                <li>ProtoBuf</li>
+                <li>Pug</li>
+                <li>Puppet</li>
+                <li>Python</li>
+                <li>Q</li>
+                <li>R</li>
+                <li>RPM</li>
+                <li>reStructuredText</li>
+                <li>Ruby</li>
+                <li>Rust</li>
+                <li>SAS</li>
+                <li>Sass</li>
+                <li>Spreadsheet</li>
+                <li>Scala</li>
+                <li>Scheme</li>
+                <li>SCSS</li>
+                <li>Shell</li>
+                <li>Sieve</li>
+                <li>Slim</li>
+                <li>Smalltalk</li>
+                <li>Smarty</li>
+                <li>Solr</li>
+                <li>Soy</li>
+                <li>Stylus</li>
+                <li>SQL (several dialects)</li>
+                <li>SPARQL</li>
+                <li>Squirrel</li>
+                <li>Swift</li>
+                <li>sTeX, LaTeX</li>
+                <li>Tcl</li>
+                <li>Textile</li>
+                <li>Tiddlywiki</li>
+                <li>Tiki wiki</li>
+                <li>TOML</li>
+                <li>Tornado (templating language)</li>
+                <li>troff (for manpages)</li>
+                <li>TTCN</li>
+                <li>TTCN Configuration</li>
+                <li>Turtle</li>
+                <li>Twig</li>
+                <li>VB.NET</li>
+                <li>VBScript</li>
+                <li>Velocity</li>
+                <li>Verilog/SystemVerilog</li>
+                <li>VHDL</li>
+                <li>Vue.js app</li>
+                <li>Web IDL</li>
+                <li>WebAssembly Text Format</li>
+                <li>XML/HTML</li>
+                <li>XQuery</li>
+                <li>Yacas</li>
+                <li>YAML</li>
+                <li>YAML frontmatter</li>
+                <li>Z80</li>
+            </ul>
+           </div>
+            <div class="find-prog-lang__current">current JavaScript</div>
+        </div>
+
+        <div id="settingsMenu" class="settingsMenu">
+            <div class="menu_wrapper">
+                <div data-menu-close="close" class="close_menu">&#10005</div>
+                <h2>Settings</h2>
+
+                <ul class="menuList" >
+                    <div>
+                <ul class="menuList">
+                    <div data-file-download="download-file" >
+
+                        <li class="item">Download</li>
+                    </div>
+                    <div>
+                        <li class="item1">Save</li>
+                    </div>
+                    <div>
+                        <li class="item2">One window</li>
+                    </div>
+                    <div>
+                        <li class="item3">Two windows</li>
+                    </div>
+                    <div>
+
+                        <li class="item4">Three windows</li>
+                    </div>
+                    <div>
+                        <li class="item5">Feedback</li>
+                    </div>
+                    <div>
+                        <li id="feedbackPopUpOpen" class="item5">Feedback</li>
+                    </div>
+                    <div>
+                        <li id="hide_show_header" class="item6">Hide header</li>
+
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <div id="feedback-wrapper" class="feedback-wrapper">
+            <div class="feedback_menu">
+                <div onclick="closePopUp" id="closePopUp" class="colse_pop_up">&#10005</div>
+                <h2 class="feedback_menu__h2">Feedback</h2>
+                <p class="feedback_menu__text">If you want know more about my project please write my instagram</p>
+                <button class="feedback_menu_btn"><a href="https://www.instagram.com/lp_deadpool/" target="_blank"
+                        rel="noopener noreferrer">@lp deadpool</a></button>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div id="tabs" class="tabs horizontal-scroll-wrapper">
+            <div id="tabs__body" class="tabs__body tabs">
+                <div data-tab="#0" class="tab active">
+                    <p data-tab-name="" id="tab-name">unnamed</p>
+                    <div data-close-tab="close-tab" class="close-tab">✕</div>
+                </div>
+            </div>
+            <div id="create-tab" class="create-tab">+</div>
+        </div>
+        <div class="tabs-content">
+            <div data-tab-content="#0" class="content tab-content-active">
+
+            </div>
+        </div>
+        </div>
+        <div id="scripts">
+            <script src="plugins/codemirror/lib/codemirror.js"></script>
+            <script src="plugins/codemirror/mode/javascript/javascript.js"></script>
+            <script src="plugins/codemirror/addon/hint/javascript-hint.js"></script>
+            <script src="plugins/codemirror/addon/hint/show-hint.js"></script>
+            <script src="js/codeEditor.js" defer></script>
+        </div>
+
+        <script src="plugins/codemirror/lib/codemirror.js"></script>
+        <script src="plugins/codemirror/mode/javascript/javascript.js"></script>
+        <script src="plugins/codemirror/addon/hint/javascript-hint.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+        <script src="js/codeEditor.js" defer  type="module"></script>
+
+</body>
+
+</html>
