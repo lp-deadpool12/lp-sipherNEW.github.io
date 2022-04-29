@@ -46,16 +46,78 @@
    }
 }
 
-.header__search-lang {
+
+.search-lang__btn {
    font-weight: 400;
    font-size: 15px;
    line-height: 18px;
    padding: 9px 21px;
    margin: 0 65px;
+   cursor: pointer;
 
    background: rgba(0, 0, 0, 0.34);
    backdrop-filter: blur(10px);
    border-radius: 3px;
+}
+
+.header__search-lang.active {
+   .search-lang__btn {
+      visibility: hidden;
+   }
+
+   .search-lang__block {
+      display: block;
+      width: 266px;
+      padding: 14px 16px 10px;
+      position: absolute;
+      top: 0;
+      left: -30%;
+      z-index: 5;
+      background: rgba(40, 40, 40, 0.153);
+      border: 0.5px solid rgba(130, 130, 130, 0.2);
+      box-sizing: border-box;
+      border-radius: 7px;
+      filter: drop-shadow(1px 0px 8px rgba(49, 163, 142, 0.03));
+      backdrop-filter: blur(45px);
+   }
+}
+
+.header__search-lang {
+   position: relative;
+}
+
+.search-lang__block {
+   display: none;
+}
+
+.search-lang__search-input {
+   width: 100%;
+   height: 32px;
+   background: url('/lp-sipherNEW.github.io/img/search.svg') 11px 50% no-repeat;
+   background-color: rgba(0, 0, 0, 0.38);
+   border-radius: 37px;
+   position: relative;
+}
+
+.search-lang__items {
+   margin: 12px 0 8px;
+
+}
+
+.search-lang__item {
+   font-weight: 400;
+   font-size: 18px;
+   line-height: 22px;
+   margin: 8px 0;
+   cursor: pointer;
+}
+
+.search-lang__current {
+   font-size: 12px;
+   line-height: 15px;
+   text-align: right;
+
+   color: rgba(255, 255, 255, 0.42);
 }
 
 .header__menu {
@@ -113,7 +175,7 @@
       justify-content: center;
       align-items: center;
       color: #fff;
-
+      cursor: default;
 
 
       & p {
@@ -123,10 +185,11 @@
          font-size: 18px;
          line-height: 22px;
          letter-spacing: 0.05em;
+         padding: 0 20px 0 0;
       }
 
       .tab__close {
-         padding: 0 0 0 20px;
+         cursor: pointer;
       }
 
       &.active {
@@ -142,6 +205,7 @@
       background: #011D22;
       border-radius: 5px;
       margin: 0 10px;
+      cursor: pointer;
    }
 }
 
