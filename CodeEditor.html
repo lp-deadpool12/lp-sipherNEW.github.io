@@ -50,14 +50,16 @@
             <div class="section__tabs">
                 <div class="tabs__container">
                     <nav class="tabs__items">
-                        <a href="#tab_01" class="tabs__item active">
-                            <p>untitled</p>
-                            <div class="tab__close"><img src="/lp-sipherNEW.github.io/img/cross.svg" alt=""></div>
-                        </a>
-                        <div class="tab__create">+</div>
+                        <div class="tabs__body">
+                            <div data-tab="0" class="tabs__item tab-active">
+                                untitled
+                                <div class="tab__close">✕</div>
+                            </div>
+                        </div>
+                        <div data-tab-create="1" class="tab__create">+</div>
                     </nav>
                     <div class="tabs__content">
-                        <div id="tab_01" class="tabs__block">
+                        <div data-tab-content="0" class="tabs__block tabs__block-active">
                             some code
                         </div>
                     </div>
