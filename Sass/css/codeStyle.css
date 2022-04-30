@@ -9,10 +9,15 @@
   transition: 0.2s;
 }
 
+body {
+  display: flex;
+}
+
 .wrapper {
   width: 100%;
   height: 100vh;
   background: #03262D;
+  overflow: hidden;
 }
 
 .settings-menu {
@@ -20,12 +25,17 @@
   border-left: 1px solid #767676;
   box-sizing: border-box;
   backdrop-filter: blur(24px);
-  right: 0%;
+  right: 0px;
   top: 0%;
   position: absolute;
   width: 240px;
   height: 100vh;
-  z-index: 99;
+  z-index: 949;
+  transform: translateX(240px);
+}
+
+.settings-menu-active {
+  transform: translateX(0px);
 }
 
 .settings-menu__close-cross {
@@ -50,7 +60,7 @@
 }
 
 .settings-menu__setting {
-  width: 100%;
+  width: 240px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -86,6 +96,7 @@
   margin-top: 5px;
   align-items: center;
   flex-direction: column;
+  display: none;
 }
 
 .settings-menu__translator-input-wrapp {
