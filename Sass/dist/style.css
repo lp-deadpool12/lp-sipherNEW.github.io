@@ -62,24 +62,20 @@
   margin: 0 37.5px;
   cursor: pointer;
 }
-
 .main__btn--blue {
   border: 1px solid #31A38E;
 }
-
 .main__btn--blue:hover {
   background-color: #31A38E;
 }
-
 .main__btn--green {
   border: 1px solid #2FB55D;
 }
-
 .main__btn--green:hover {
   background-color: #2FB55D;
 }
 
-input[type="file"] {
+input[type=file] {
   display: none;
   cursor: pointer;
 }

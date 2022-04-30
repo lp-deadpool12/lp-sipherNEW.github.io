@@ -1,0 +1,166 @@
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url('/lp-sipherNEW.github.io/img/main-screen.png') no-repeat;
+    background-size: cover;
+}
+.content{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 23, 28, 0.77);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container{
+    width: 1060px;
+    margin: 0 auto;
+}
+// ======================================================
+.main__content{
+    padding-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main__img{
+    width: 140px;
+    height: 140px;
+}
+.main__title{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 59px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 96px 0 32px;
+}
+.main__buttons{
+    display: flex;
+    justify-content: center;
+}
+.main__btn{
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    align-self: center;
+    width: 216px;
+    padding: 16px 0;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0px 5px 16px 2px rgba(49, 163, 142, 0.35);
+    margin: 0 37.5px;
+    cursor: pointer;
+    // transition: all 0.2s ease;
+    &--blue{
+        border: 1px solid #31A38E;
+        &:hover{
+            background-color: #31A38E;
+        }
+    }
+    &--green{
+        border: 1px solid #2FB55D;
+        &:hover{
+            background-color: #2FB55D;
+        }
+    }
+}
+input[type="file"] {
+    display: none;
+    cursor: pointer;
+}
+// ==============================================================
+.footer__container{
+    padding-bottom: 30px;
+}
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0.05em;
+}
+.footer__texts{
+    display: flex;
+}
+.footer__text{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    opacity: 0.3;
+    padding-right: 44px;
+}
+.footer__text--up{
+    font-weight: 500;
+    text-transform: uppercase;    
+}
+.footer__feedback{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+}
+// ================================================
+.footer__developers{
+    display: none;
+}
+.footer__developers.active{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 23, 28, 0.77);
+    backdrop-filter: blur(16px);
+}
+.developers__content{
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    width: 340px;
+    min-height: 520px;
+    background: #011D22;
+    border-radius: 10px;
+    padding: 18px 23px;
+}
+.developers__title{
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.developers__item{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+.developers__icon{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 12px;
+}
+.developers__name{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+.developers__duty{
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.05em;
+    color: rgba(218, 218, 218, 0.42);
+}

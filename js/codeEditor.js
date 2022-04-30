@@ -1,7 +1,5 @@
 'use strict'
 
-
-
 document.addEventListener('click', (e)=>{
    let clicedElem = e.target
    const settingsMenu = document.querySelector('.settings-menu')
