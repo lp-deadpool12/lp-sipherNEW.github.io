@@ -28,7 +28,6 @@ document.addEventListener('click', (e)=>{
          const element = getTabs[i];
          
          element.classList.remove('tab-active')
-
       }
    }
 
@@ -48,8 +47,7 @@ document.addEventListener('click', (e)=>{
 
    if (clicedElem.hasAttribute("data-tab-create")) {
       createTab()
-   }
-   else if (clicedElem.hasAttribute("data-tab")){
+   }else if (clicedElem.hasAttribute("data-tab")){
       selectTab()
       clicedElem.classList.add('tab-active')
       console.log(clicedElem.previousSibling);
