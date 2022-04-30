@@ -25,6 +25,7 @@
   position: absolute;
   width: 240px;
   height: 100vh;
+  z-index: 99;
 }
 
 .settings-menu__close-cross {
@@ -138,4 +139,217 @@
 
 .settings-menu__translator-btn:active {
   border: 0.6px solid #68757B;
+}
+
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #011D22;
+  padding: 0px 110px;
+}
+
+.header__container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header__content,
+.header__block-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.header__title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #D0FFF7;
+}
+
+.header__menu {
+  width: 55px;
+  height: 55px;
+  position: relative;
+}
+
+.header__menu img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.search-lang__btn {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 9px 21px;
+  margin: 0 65px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(10px);
+  border-radius: 3px;
+}
+
+.header__search-lang.active .search-lang__btn {
+  visibility: hidden;
+}
+
+.header__search-lang.active .search-lang__block {
+  display: block;
+  width: 266px;
+  padding: 14px 16px 10px;
+  position: absolute;
+  top: 0;
+  left: -30%;
+  z-index: 5;
+  background: rgba(40, 40, 40, 0.153);
+  border: 0.5px solid rgba(130, 130, 130, 0.2);
+  box-sizing: border-box;
+  border-radius: 7px;
+  filter: drop-shadow(1px 0px 8px rgba(49, 163, 142, 0.03));
+  backdrop-filter: blur(45px);
+}
+
+.header__search-lang {
+  position: relative;
+}
+
+.search-lang__block {
+  display: none;
+}
+
+.search-lang__search-input {
+  width: 100%;
+  height: 32px;
+  background: url("/lp-sipherNEW.github.io/img/search.svg") 11px 50% no-repeat;
+  background-color: rgba(0, 0, 0, 0.38);
+  border-radius: 37px;
+  position: relative;
+}
+
+.search-lang__items {
+  margin: 12px 0 8px;
+}
+
+.search-lang__item {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.search-lang__current {
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.header__menu {
+  z-index: 5;
+  display: block;
+  position: relative;
+  width: 26px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.header__menu span, .header__menu::before, .header__menu::after {
+  left: 0;
+  position: absolute;
+  height: 3.33px;
+  width: 100%;
+  transition: all .3s ease 0s;
+  background-color: #D1EBE5;
+  border-radius: 1px;
+}
+
+.header__menu::before, .header__menu::after {
+  content: "";
+}
+
+.header__menu::before {
+  top: 0;
+}
+
+.header__menu::after {
+  bottom: 0;
+}
+
+.header__menu span {
+  top: 50%;
+  transform: scale(1) translate(0px, -50%);
+}
+
+.section__tabs {
+  background-color: #03262D;
+}
+
+.tabs__items {
+  display: flex;
+  align-items: center;
+}
+
+.tabs__items .tabs__item {
+  padding: 0 17px 0 23px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: default;
+}
+
+.tabs__items .tabs__item p {
+  position: relative;
+  z-index: 2;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  padding: 0 20px 0 0;
+}
+
+.tabs__items .tabs__item .tab__close {
+  cursor: pointer;
+}
+
+.tabs__items .tabs__item.active {
+  background-color: #072328;
+  border-radius: 5px 5px 0 0;
+}
+
+.tabs__items .tab__create {
+  font-size: 25px;
+  line-height: 50%;
+  padding: 6px;
+  background: #011D22;
+  border-radius: 5px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.tabs__content .tabs__block {
+  height: calc(100vh - 130px);
+  position: relative;
+  display: none;
+  padding: 20px;
+  flex: 18;
+  line-height: 24px;
+  background-color: #072328;
+}
+
+.tabs__content .tabs__block:target {
+  display: block;
 }
