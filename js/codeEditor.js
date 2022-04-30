@@ -52,6 +52,7 @@ document.addEventListener('click', (e)=>{
    else if (clicedElem.hasAttribute("data-tab")){
       selectTab()
       clicedElem.classList.add('tab-active')
+      console.log(clicedElem.previousSibling);
    }else if(clicedElem.classList.contains('tab__close')){
       clicedElem.parentNode.remove()
    }
