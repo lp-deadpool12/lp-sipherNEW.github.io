@@ -1,5 +1,5 @@
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -93,7 +93,6 @@
   display: flex;
   padding: 15px 0;
 }
-
 .notes__note-menu span {
   left: 0;
   position: absolute;
@@ -103,11 +102,9 @@
   transition: all 0.3s ease 0s;
   background-color: #d1ebe5;
 }
-
 .notes__note-menu span:first-child {
   left: 12px;
 }
-
 .notes__note-menu span:nth-child(2) {
   left: 24px;
 }
@@ -140,11 +137,9 @@
   margin-bottom: 17px;
   cursor: pointer;
 }
-
 .notes__note-icon:last-child {
   margin: 0;
 }
-
 .notes__note-icon img {
   width: 20px;
   height: 20px;
@@ -165,7 +160,6 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
-
 .notes__add-note:hover {
   background-color: rgba(234, 238, 15, 0.8);
 }
@@ -221,7 +215,6 @@
   line-height: 18px;
   letter-spacing: 0.05em;
 }
-
 .notes__view-btn:hover {
   background-color: rgba(234, 238, 15, 0.8);
 }

@@ -16,30 +16,66 @@
 <body>
     <div class="wrapper">
         <div class="container">
+            <!-- ! insert the header -->
             <section class="notes">
-                <div >
-                    <div class="notes__search">
-                        <div class="notes__search-icon"></div>
-                        <input class="notes__search-input" type="text">
-                    </div>
-                    <div class="notes__notes-container">
-                        <div class="notes__note">
-                            <div>
-                                <h4 class="notes__note-name">Note</h4>
-                                <p class="notes__last-changes">latest changes 5 minutes ago</p>
+                <div class="notes__container">
+                    <div class="notes__menu">
+                        <div class="notes__search">
+                            <!-- <div class="notes__search-icon"><img src="/lp-sipherNEW.github.io/img/search.svg" alt=""></div> -->
+                            <input class="notes__search-input" type="search" placeholder="Note search">
+                        </div>
+                        <div class="notes__notes-container">
+                            <div data-note="0" class="notes__note">
+                                <div >
+                                    <h4 class="notes__note-name">Note</h4>
+                                    <p class="notes__last-changes">latest changes 5 minutes ago</p>
+                                </div>
+                                <div class="notes__note-menu"><span></span><span></span><span></span>
+                                    <div class="notes__note-body">
+                                        <ul class="notes__note-edit">
+                                            <li class="notes__note-icon">
+                                                <img src="/lp-sipherNEW.github.io/img/n-rename.svg" alt="">
+                                                RENAME
+                                            </li>
+                                            <li class="notes__note-icon">
+                                                <img src="/lp-sipherNEW.github.io/img/n-copy.svg" alt="">
+                                                COPY
+                                            </li>
+                                            <li data-note-delete="0" class="notes__note-icon">
+                                                <img src="/lp-sipherNEW.github.io/img/n-delete.svg" alt="">
+                                                DELETE
+                                            </li>
+                                            <li class="notes__note-icon">
+                                                <img src="/lp-sipherNEW.github.io/img/n-features.svg" alt="">
+                                                FEATURES
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="notes__note-menu"><span></span><span></span><span></span></div>
+                        </div>
+                        <button data-note-create="1" class="notes__add-note">Add new note</button>
+                    </div>
+                    <div class="notes__view">
+                        <div class="notes__view-container">
+                            <!-- <div class="notes__veiw-img">
+                                <img src="/lp-sipherNEW.github.io/img/image 5.svg" alt="">
+                            </div> -->
+                            <div class="notes__view-notes">
+                                <div>
+                                    <div class="notes__view-title">Create Tabs</div>
+                                    <div class="notes__view-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aspernatur, ea aperiam ad vitae, rem cupiditate voluptate asperiores ratione reprehenderit est molestias delectus pariatur suscipit. In laboriosam repudiandae hic commodi.</div>
+                                </div>
+                                <button class="notes__view-btn">Delete</button>
+                            </div>
                         </div>
                     </div>
-                    <button class="notes__add-note">Add new note</button>
-                </div>
-                <div class="notes__viev">
-                    <img src="" alt="">
                 </div>
             </section>
             
         </div>
     </div>
+    <script src="/lp-sipherNEW.github.io/js/notes.js"></script>
 </body>
 
 </html>
