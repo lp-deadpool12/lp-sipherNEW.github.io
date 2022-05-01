@@ -95,21 +95,19 @@
                 </li>
                 <li class="settings-menu__setting settings-menu__setting-translator">
                     <div class="settings-menu__icon"><img src="img/save.svg" alt=""> </div>Translator <div
-                        class="settings-menu__expand-icon"><img src="img/extend.svg" alt=""> </div>
+                        class="settings-menu__expand-icon" data-extend-icon><img src="img/extend.svg" alt=""> </div>
                 </li>
                 <div class="settings-menu__translator-wrapp">
                     <div class="settings-menu__translator-input-wrapp">
                         <div >
-                            <input placeholder="EN" type="text" class="settings-menu__translator-input settings-menu__translator-input-RU">
-                            <input placeholder="RU" type="text" class="settings-menu__translator-input settings-menu__translator-input-EN">
+                            <input placeholder="EN" type="text" name="en-text" class="settings-menu__translator-input settings-menu__translator-input-EN">
+                            <input placeholder="RU" type="text" name="ru-text" class="settings-menu__translator-input settings-menu__translator-input-RU">
                         </div>
-                        <div class="settings-menu__translator-reverse-lang">
+                        <button type="button" class="settings-menu__translator-reverse-lang" data-reverse-lang>
                             <img src="img/reverse-lang.svg" alt="">
-                        </div>
-                         
-                    
+                        </button>  
                     </div>
-                    <button class="settings-menu__translator-btn">Translate</button>
+                    <button class="settings-menu__translator-btn" type="button" data-translate-btn>Translate</button>
                 </div>
             </ul>
         </div>
