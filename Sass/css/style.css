@@ -1,5 +1,10 @@
 * {
   transition: 0.3s;
+  color: #fff;
+}
+
+body {
+  overflow: hidden;
 }
 
 .wrapper {
@@ -123,6 +128,7 @@ input[type="file"] {
 
 .footer__developers {
   display: none;
+  opacity: 0;
 }
 
 .footer__developers.active {
@@ -135,6 +141,7 @@ input[type="file"] {
   background: rgba(0, 0, 0, 0.41);
   backdrop-filter: blur(16px);
   z-index: 99;
+  opacity: 1;
 }
 
 .developers__container {
@@ -157,7 +164,7 @@ input[type="file"] {
   backdrop-filter: blur(2px);
   /* Note: backdrop-filter has minimal browser support */
   border-radius: 10px;
-  padding: 18px 0px 0px 23px;
+  padding: 25px 0px 0px 0px;
   overflow: auto;
 }
 
@@ -174,6 +181,10 @@ input[type="file"] {
   margin-bottom: 15px;
   display: flex;
   align-items: center;
+}
+
+.developers__items {
+  padding-left: 23px;
 }
 
 .developers__icon {
