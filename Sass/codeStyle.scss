@@ -82,43 +82,69 @@ body{
     align-items: center;
     justify-content: center;
     margin-left: 10px;
+    transition: 200ms;
+}
+.js-extend-icon-rotate{
+   transform: rotate(180deg);
 }
 .settings-menu__translator-wrapp {
-    display: flex;
     justify-content: center;
     margin-top: 5px;
     align-items: center;
     flex-direction: column;
     display: none;
 }
+.js-translator-show{
+   display: flex;
+}
 .settings-menu__translator-input-wrapp {
+   margin-bottom: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
     
 }
+.settings-menu__translator-inputs{
+   height: 65px;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
 .settings-menu__translator-input{
     display: block;
     width: 180px;
     height: 28px;
-    left: 810px;
-    top: 504px;
-    padding-left: 7px;
+    padding-left: 35px;
     background: #10242D;
     border: 0.6px solid rgba(83, 83, 83, 0.37);
     box-sizing: border-box;
     border-radius: 5px; 
     color: rgba(255, 255, 255, 0.7);
-
+   
     &:focus{
         border: 0.6px solid rgba(255, 255, 255, 0.37);
     }
 }
+.js-input-reverse{
+   order: -1;
+}
+.settings-menu__translator-input-EN,
 .settings-menu__translator-input-RU {
-    margin-bottom: 10px; 
+   position: relative;
+}
+.translator-input-label{
+   color: rgba(255, 255, 255, 0.5);
+   position: absolute;
+   left: 7px;
+   top: 50%;  // эта и ниже строка позиционируют по центру по вертикали
+   transform: translateY(-50%);
 }
 
 .settings-menu__translator-reverse-lang {
+   background-color: transparent;
+   outline: none;
+   border: none;
     margin-left: 10px;
     cursor: pointer;
 }
@@ -129,7 +155,6 @@ body{
     border: 0.6px solid rgba(83, 83, 83, 0.37);
     box-sizing: border-box;
     border-radius: 3px;
-    margin-top: 10px;
     margin-right: 25px;
     color: #68757B;
     &:hover{

@@ -93,15 +93,21 @@
                 <li class="settings-menu__setting">
                     <div class="settings-menu__icon"><img src="img/save.svg" alt=""> </div>Reminders
                 </li>
-                <li class="settings-menu__setting settings-menu__setting-translator">
-                    <div class="settings-menu__icon"><img src="img/save.svg" alt=""> </div>Translator <div
+                <li class="settings-menu__setting settings-menu__setting-translator" data-translator-settings-item>
+                    <div class="settings-menu__icon"><img src="img/translate.svg" alt=""> </div>Translator <div
                         class="settings-menu__expand-icon" data-extend-icon><img src="img/extend.svg" alt=""> </div>
                 </li>
-                <div class="settings-menu__translator-wrapp">
+                <div class="settings-menu__translator-wrapp" data-translator-block>
                     <div class="settings-menu__translator-input-wrapp">
-                        <div >
-                            <input placeholder="EN" type="text" name="en-text" class="settings-menu__translator-input settings-menu__translator-input-EN">
-                            <input placeholder="RU" type="text" name="ru-text" class="settings-menu__translator-input settings-menu__translator-input-RU">
+                        <div class="settings-menu__translator-inputs">
+                            <div class="settings-menu__translator-input-EN">
+                                <input type="text" name="en-text" class="settings-menu__translator-input">
+                                <span class="translator-input-label">EN</span>
+                            </div>
+                            <div class="settings-menu__translator-input-RU">
+                                <input type="text" name="ru-text" class="settings-menu__translator-input">
+                                <span class="translator-input-label">RU</span>
+                            </div>
                         </div>
                         <button type="button" class="settings-menu__translator-reverse-lang" data-reverse-lang>
                             <img src="img/reverse-lang.svg" alt="">
