@@ -5,6 +5,8 @@ const inputEN = document.querySelector('[name="en"]'); // поле ввода\в
 const inputRU = document.querySelector('[name="ru"]'); // поле ввода\вывода русского текста
 const reverseLangBtn = document.querySelector('[data-reverse-lang]'); // кнопка реверса языка перевода: en->ru или ru->en
 const translateBtn = document.querySelector('[data-translate-btn]'); // главная кнопка, идет запрос на API и приходит перевод
+const closeCrossBtn = document.querySelector('.settings-menu__close-cross'); // кнопка закрытия меню Settings
+
 
 // показываем/скрываем поля ввода для транслейта при клике на єлемент settings-menu - translator
 translatorMenuItem.addEventListener('click', () => {
@@ -50,4 +52,12 @@ translateBtn.addEventListener('click', () => {
     }
     // вызываем функцию и передаём результат (перевод) в инпут с результатом
     fetchTranslate().then(data => { resultInput.value = data.responseData.translatedText !== 'NO QUERY SPECIFIED. EXAMPLE REQUEST: GET?Q=HELLO&LANGPAIR=EN|IT' ? data.responseData.translatedText : '' });
+})
+
+closeCrossBtn.addEventListener('click', () => {
+    // свернуть Translator при закрытии Settings меню
+    translatorBlock.classList.remove('js-translator-show');
+    // и очистить поля инпутов
+    inputEN.value = '';
+    inputRU.value = '';
 })
