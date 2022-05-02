@@ -21,51 +21,46 @@
             <header class="header">
                 <div class="header__container container">
                     <div class="header__content">
-                        <div class="header__title">lp cipher 1.0</div>
-                        <div class="header__icon">
-                            <img src="/lp-sipherNEW.github.io/img/header__icon.svg" alt="">
-                        </div>
-                        <div class="header__block-left">
+                        <h3 class="header__title">lp cipher 1.0</h3>
+                        <div class="header__icon"><img src="/lp-sipherNEW.github.io/img/header__icon.svg" alt=""></div>
+                        <div class="header__btns">
                             <div class="header__search-lang">
-                                <p class="search-lang__btn">JavaScript</p>
-                                <div class="search-lang__block ">
-                                    <input type="search" class="search-lang__search-input">
-                                    <ul class="search-lang__items">
-                                        <li class="search-lang__item">Python</li>
-                                        <li class="search-lang__item">JavaScript</li>
-                                        <li class="search-lang__item">CSS</li>
-                                        <li class="search-lang__item">Java</li>
-                                        <li class="search-lang__item">C++</li>
-                                        <li class="search-lang__item">Kotlin</li>
-                                        <li class="search-lang__item">MatLab</li>
+                                <button class="header__btn-search-lang">JavaScript</button>
+                                <div class="header__block-search-lang">
+                                    <input type="search" class="header__input-search-lang">
+                                    <ul class="header__list-search-lang">
+                                        <li class="header__lang">Python</li>
+                                        <li class="header__lang">JavaScript</li>
+                                        <li class="header__lang">CSS</li>
+                                        <li class="header__lang">Java</li>
+                                        <li class="header__lang">C++</li>
+                                        <li class="header__lang">Kotlin</li>
+                                        <li class="header__lang">MatLab</li>
                                     </ul>
-                                    <div class="search-lang__current">current JavaScript</div>
+                                    <div class="header__current-lang">current JavaScript</div>
                                 </div>
                             </div>
-                            <div class="header__menu"><span></span></div>
+                            <button type="button" class="header__settings-menu"><span></span></button>
                         </div>
                     </div>
                 </div>
             </header>
-            <div class="section__tabs">
-                <div class="tabs__container">
-                    <nav class="tabs__items">
-                        <div class="tabs__body">
+            <section class="tabs">
+                    <nav class="tabs__body">
+                        <div class="tabs__items">
                             <div data-tab="0" class="tabs__item tab-active">
                                 untitled
-                                <div class="tab__close">✕</div>
+                                <div class="tab__close-cross">✕</div>
                             </div>
                         </div>
                         <div data-tab-create="1" class="tab__create">+</div>
                     </nav>
                     <div class="tabs__content">
-                        <div data-tab-content="0" class="tabs__block tabs__block-active">
+                        <div data-tab-content="0" class="tabs__code tabs__code-active">
                             some code
                         </div>
                     </div>
-
-                </div>
-            </div>
+            </section>
         </div>
         <div class="settings-menu">
             <div class="settings-menu__close-cross">✕</div>
@@ -108,8 +103,6 @@
                         <div class="settings-menu__translator-reverse-lang">
                             <img src="img/reverse-lang.svg" alt="">
                         </div>
-                         
-                    
                     </div>
                     <button class="settings-menu__translator-btn">Translate</button>
                 </div>
@@ -117,8 +110,7 @@
         </div>
     </div>
     <script src="js/codeEditor.js" defer type="module"></script>
-        
-   
+    
 </body>
 
 </html>

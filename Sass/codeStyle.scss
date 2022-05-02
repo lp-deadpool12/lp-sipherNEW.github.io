@@ -169,7 +169,7 @@ html {
 }
 
 .header__content,
-.header__block-left {
+.header__btns {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -180,7 +180,6 @@ html {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
-  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #d0fff7;
 }
@@ -200,8 +199,7 @@ html {
   }
 }
 
-.search-lang__btn {
-  font-weight: 400;
+.header__btn-search-lang {
   font-size: 15px;
   line-height: 18px;
   padding: 9px 21px;
@@ -214,11 +212,11 @@ html {
 }
 
 .header__search-lang.active {
-  .search-lang__btn {
+  .header__btn-search-lang {
     visibility: hidden;
   }
 
-  .search-lang__block {
+  .header__block-search-lang {
     display: block;
     width: 266px;
     padding: 14px 16px 10px;
@@ -239,11 +237,11 @@ html {
   position: relative;
 }
 
-.search-lang__block {
+.header__block-search-lang {
   display: none;
 }
 
-.search-lang__search-input {
+.header__input-search-lang {
   width: 100%;
   height: 32px;
   background: url("/lp-sipherNEW.github.io/img/search.svg") 11px 50% no-repeat;
@@ -253,19 +251,18 @@ html {
   padding-left: 35px;
 }
 
-.search-lang__items {
+.header__list-search-lang {
   margin: 12px 0 8px;
 }
 
-.search-lang__item {
-  font-weight: 400;
+.header__lang {
   font-size: 18px;
   line-height: 22px;
   margin: 8px 0;
   cursor: pointer;
 }
 
-.search-lang__current {
+.header__current-lang {
   font-size: 12px;
   line-height: 15px;
   text-align: right;
@@ -273,12 +270,13 @@ html {
   color: rgba(255, 255, 255, 0.42);
 }
 
-.header__menu {
+.header__settings-menu {
   z-index: 5;
   display: block;
   position: relative;
   width: 26px;
   height: 20px;
+  background: none;
   cursor: pointer;
 
   & span,
@@ -312,11 +310,11 @@ html {
   }
 }
 
-.section__tabs {
+.tabs {
   background-color: #03262d;
 }
 
-.tabs__items {
+.tabs__body {
   display: flex;
   align-items: center;
   padding-top: 10px;
@@ -343,12 +341,11 @@ html {
     align-items: center;
     color: #fff;
     cursor: pointer;
-   transition: 0.15s;
+    transition: 0.15s;
     z-index: 2;
     font-weight: 300;
     font-size: 18px;
     line-height: 22px;
-    letter-spacing: 0.05em;
     padding: 0 20px 0 20px;
     &:hover {
       opacity: 0.7;
@@ -357,7 +354,7 @@ html {
     & p {
     }
 
-    .tab__close {
+    .tab__close-cross {
       cursor: pointer;
       margin-left: 10px;
       user-select: none;
@@ -389,7 +386,7 @@ html {
     }
   }
 }
-.tabs__body {
+.tabs__items {
   display: flex;
   align-items: center;
 }
@@ -398,7 +395,7 @@ html {
   height: 100%;
 }
 
-.tabs__block {
+.tabs__code {
   height: calc(100vh - 130px);
   position: relative;
   display: none;
@@ -408,6 +405,6 @@ html {
   background-color: #072328;
 }
 
-.tabs__block-active {
+.tabs__code-active {
   display: block;
 }

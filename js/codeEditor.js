@@ -3,14 +3,14 @@
 document.addEventListener('click', (e)=>{
    let clicedElem = e.target
    const settingsMenu = document.querySelector('.settings-menu')
-   const openSettingsMenuBtn = document.querySelector(".header__menu")
+   const openSettingsMenuBtn = document.querySelector(".header__settings-menu")
    const headerLangSearchMenu = document.querySelector('.header__search-lang');
-   const headerLangSearchBtn = document.querySelector('.search-lang__btn')
+   const headerLangSearchBtn = document.querySelector('.header__btn-search-lang')
    
    let tabsConunter = 1
    let getTabs = document.querySelectorAll("div[data-tab]")
    let getTabsContent = document.querySelectorAll("div[data-tab-content]")
-   const tabsContainer = document.querySelector('.tabs__body') 
+   const tabsContainer = document.querySelector('.tabs__items') 
    const tabsContentContainer = document.querySelector('.tabs__content') 
 
 
@@ -18,7 +18,7 @@ document.addEventListener('click', (e)=>{
       let tab = document.createElement('div')
       tab.classList.add('tabs__item')
       tab.setAttribute('data-tab', tabsConunter)
-      tab.innerHTML = ` untitled <div class="tab__close">✕</div>`
+      tab.innerHTML = ` untitled <div class="tab__close-cross">✕</div>`
       tabsContainer.insertAdjacentElement('beforeend', tab)
       tabsConunter++
    }
@@ -28,6 +28,7 @@ document.addEventListener('click', (e)=>{
          const element = getTabs[i];
          
          element.classList.remove('tab-active')
+
       }
    }
 
@@ -47,11 +48,12 @@ document.addEventListener('click', (e)=>{
 
    if (clicedElem.hasAttribute("data-tab-create")) {
       createTab()
-   }else if (clicedElem.hasAttribute("data-tab")){
+   }
+   else if (clicedElem.hasAttribute("data-tab")){
       selectTab()
       clicedElem.classList.add('tab-active')
       console.log(clicedElem.previousSibling);
-   }else if(clicedElem.classList.contains('tab__close')){
+   }else if(clicedElem.classList.contains('tab__close-cross')){
       clicedElem.parentNode.remove()
    }
 })
