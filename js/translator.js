@@ -49,5 +49,5 @@ translateBtn.addEventListener('click', () => {
         }
     }
     // вызываем функцию и передаём результат (перевод) в инпут с результатом
-    fetchTranslate().then(data => { resultInput.value = data.responseData.translatedText });
+    fetchTranslate().then(data => { resultInput.value = data.responseData.translatedText !== 'NO QUERY SPECIFIED. EXAMPLE REQUEST: GET?Q=HELLO&LANGPAIR=EN|IT' ? data.responseData.translatedText : '' });
 })
