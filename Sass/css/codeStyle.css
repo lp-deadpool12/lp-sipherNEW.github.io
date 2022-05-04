@@ -324,108 +324,74 @@ html {
   transform: scale(1) translate(0px, -50%);
 }
 
-.section__tabs {
-  background-color: #03262d;
+.tabs-container {
+  width: 100%;
+  height: 100vh;
 }
 
-.tabs__items {
+.tabs-container__tabs-body {
+  width: 100%;
   display: flex;
   align-items: center;
-  padding-top: 10px;
-  overflow: hidden;
-  /* ползунок скроллбара */
+  margin-top: 5px;
 }
 
-.tabs__items::-webkit-scrollbar {
-  width: 5px;
-  /* ширина для вертикального скролла */
-  height: 3px;
-  /* высота для горизонтального скролла */
-  background: rgba(144, 144, 144, 0);
-}
-
-.tabs__items::-webkit-scrollbar-thumb {
-  background: rgba(144, 144, 144, 0.3);
-  border-radius: 11px;
-}
-
-.tabs__items:hover {
-  overflow: auto;
-}
-
-.tabs__items .tabs__item {
-  height: 50px;
+.tabs-container__tabs {
   display: flex;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.tabs-container__tab {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  color: #fff;
-  cursor: pointer;
-  transition: 0.15s;
-  z-index: 2;
-  font-weight: 300;
+  width: 147px;
+  height: 42px;
+  border-radius: 5px 5px 0px 0px;
   font-size: 18px;
   line-height: 22px;
-  letter-spacing: 0.05em;
-  padding: 0 20px 0 20px;
 }
 
-.tabs__items .tabs__item:hover {
-  opacity: 0.7;
+.tabs-container__tab-active {
+  background: #072328;
 }
 
-.tabs__items .tabs__item .tab__close {
-  cursor: pointer;
-  margin-left: 10px;
-  user-select: none;
+.tabs-container__tab-close {
+  margin-left: 17px;
 }
 
-.tabs__items .tabs__item.tab-active {
-  background-color: #072328;
-  border-radius: 5px 5px 0 0;
-}
-
-.tabs__items .tab__create {
+.tabs-container__create-tab {
+  width: 30px;
+  height: 30px;
   font-size: 25px;
-  line-height: 50%;
-  padding: 6px;
-  background: #011d22;
-  border-radius: 5px;
-  margin: 0 10px;
-  cursor: pointer;
-  width: 25px;
-  height: 25px;
-  user-select: none;
-  transition: 0.5s;
-}
-
-.tabs__items .tab__create:hover {
-  background: #032d35;
-}
-
-.tabs__items .tab__create:active {
-  border: 1px solid #03262d;
-}
-
-.tabs__body {
+  border-radius: 24px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-left: 10px;
 }
 
-.tabs__content {
+.tabs-container__create-tab:hover {
+  background-color: #011d22;
+}
+
+.tabs-container__create-tab:active {
+  background-color: #0d303a;
+}
+
+.tabs-container__tabs-contet-body {
   width: 100%;
   height: 100%;
 }
 
-.tabs__block {
-  height: calc(100vh - 130px);
-  position: relative;
+.tabs-container__tab-content {
   display: none;
-  padding: 20px;
-  flex: 18;
-  line-height: 24px;
-  background-color: #072328;
 }
 
-.tabs__block-active {
+.tabs-container__tab-content-active {
+  background: #072328;
   display: block;
+  width: 100%;
+  height: 100%;
 }
