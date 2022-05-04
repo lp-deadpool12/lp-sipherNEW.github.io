@@ -2,8 +2,8 @@
 
 document.addEventListener('click', (e)=>{
     let clickedElem = e.target
-    const editBtn = document.querySelector('.notes__note-menu');
-    const editMenu = document.querySelector('.notes__note-body');
+    const editBtn = document.querySelector('.notes__btn-note-menu');
+    const editMenu = document.querySelector('.notes__body-note-menu');
 
     if (clickedElem == editBtn){
         editMenu.classList.toggle('active');
@@ -12,7 +12,7 @@ document.addEventListener('click', (e)=>{
     };
 
     let notesCounter = 1;
-    const notesContainer = document.querySelector('.notes__notes-container');
+    const notesContainer = document.querySelector('.notes__list');
 
 
     let note = document.createElement('div')

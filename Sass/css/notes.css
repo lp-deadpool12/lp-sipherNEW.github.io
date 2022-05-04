@@ -29,10 +29,10 @@
   justify-content: space-evenly;
 }
 
-.notes__search-input {
+.notes__search {
   width: 434px;
   height: 45px;
-  background: url("/lp-sipherNEW.github.io/img/search.svg") 10px 50% no-repeat;
+  background: url("img/search.svg") 10px 50% no-repeat;
   background-color: #0B181E;
   border: 0.6px solid rgba(255, 255, 255, 0.37);
   box-sizing: border-box;
@@ -46,7 +46,7 @@
   color: #68757B;
 }
 
-.notes__notes-container {
+.notes__list {
   margin: 25px 0 0;
   width: 430px;
 }
@@ -83,18 +83,18 @@
   color: #303537;
 }
 
-.notes__note-menu {
+.notes__btn-note-menu {
   z-index: 5;
-  display: block;
   position: relative;
   width: 33px;
   height: 8px;
   cursor: pointer;
   display: flex;
-  padding: 15px 0;
+  padding: 10px 0 18px;
+  background: none;
 }
 
-.notes__note-menu span {
+.notes__btn-note-menu span {
   left: 0;
   position: absolute;
   height: 8px;
@@ -104,25 +104,25 @@
   background-color: #d1ebe5;
 }
 
-.notes__note-menu span:first-child {
+.notes__btn-note-menu span:first-child {
   left: 12px;
 }
 
-.notes__note-menu span:nth-child(2) {
+.notes__btn-note-menu span:nth-child(2) {
   left: 24px;
 }
 
-.notes__note-body {
+.notes__body-note-menu {
   display: none;
 }
 
-.notes__note-body.active {
+.notes__body-note-menu.active {
   display: block;
   transform: translate(-170px, 35px);
   min-width: 235px;
 }
 
-.notes__note-edit {
+.notes__note-edits {
   background: #0D1B22;
   border: 0.6px solid rgba(255, 255, 255, 0.37);
   box-sizing: border-box;
@@ -131,7 +131,7 @@
   cursor: default;
 }
 
-.notes__note-icon {
+.notes__note-edit {
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
@@ -141,17 +141,17 @@
   cursor: pointer;
 }
 
-.notes__note-icon:last-child {
+.notes__note-edit:last-child {
   margin: 0;
 }
 
-.notes__note-icon img {
+.notes__note-edit img {
   width: 20px;
   height: 20px;
   margin-right: 6px;
 }
 
-.notes__add-note {
+.notes__btn-add-note {
   width: 430px;
   padding: 18px 0;
   background: rgba(0, 0, 0, 0.53);
@@ -166,7 +166,7 @@
   text-transform: uppercase;
 }
 
-.notes__add-note:hover {
+.notes__btn-add-note:hover {
   background-color: rgba(234, 238, 15, 0.8);
 }
 

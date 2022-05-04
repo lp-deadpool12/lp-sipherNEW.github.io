@@ -20,46 +20,43 @@
             <section class="notes">
                 <div class="notes__container">
                     <div class="notes__menu">
-                        <div class="notes__search">
-                            <!-- <div class="notes__search-icon"><img src="/lp-sipherNEW.github.io/img/search.svg" alt=""></div> -->
-                            <input class="notes__search-input" type="search" placeholder="Note search">
-                        </div>
-                        <div class="notes__notes-container">
+                        <input class="notes__search" type="search" placeholder="Note search">
+                        <div class="notes__list">
                             <div data-note="0" class="notes__note">
-                                <div >
+                                <div>
                                     <h4 class="notes__note-name">Note</h4>
                                     <p class="notes__last-changes">latest changes 5 minutes ago</p>
                                 </div>
-                                <div class="notes__note-menu"><span></span><span></span><span></span>
-                                    <div class="notes__note-body">
-                                        <ul class="notes__note-edit">
-                                            <li class="notes__note-icon">
-                                                <img src="/lp-sipherNEW.github.io/img/n-rename.svg" alt="">
+                                <button class="notes__btn-note-menu"><span></span><span></span><span></span>
+                                    <div class="notes__body-note-menu">
+                                        <ul class="notes__note-edits">
+                                            <li class="notes__note-edit">
+                                                <img src="img/n-rename.svg" alt="">
                                                 RENAME
                                             </li>
-                                            <li class="notes__note-icon">
-                                                <img src="/lp-sipherNEW.github.io/img/n-copy.svg" alt="">
+                                            <li class="notes__note-edit">
+                                                <img src="img/n-copy.svg" alt="">
                                                 COPY
                                             </li>
-                                            <li data-note-delete="0" class="notes__note-icon">
-                                                <img src="/lp-sipherNEW.github.io/img/n-delete.svg" alt="">
+                                            <li class="notes__note-edit">
+                                                <img src="img/n-delete.svg" alt="">
                                                 DELETE
                                             </li>
-                                            <li class="notes__note-icon">
-                                                <img src="/lp-sipherNEW.github.io/img/n-features.svg" alt="">
+                                            <li class="notes__note-edit">
+                                                <img src="img/n-features.svg" alt="">
                                                 FEATURES
                                             </li>
                                         </ul>
                                     </div>
-                                </div>
+                                </button>
                             </div>
                         </div>
-                        <button data-note-create="1" class="notes__add-note">Add new note</button>
+                        <button data-note-create="1" class="notes__btn-add-note">Add new note</button>
                     </div>
                     <div class="notes__view">
                         <div class="notes__view-container">
                             <!-- <div class="notes__veiw-img">
-                                <img src="/lp-sipherNEW.github.io/img/image 5.svg" alt="">
+                                <img src="img/image 5.svg" alt="">
                             </div> -->
                             <div class="notes__view-notes">
                                 <div>
@@ -72,10 +69,9 @@
                     </div>
                 </div>
             </section>
-            
+            <script src="js/notes.js"></script>
         </div>
     </div>
-    <script src="/lp-sipherNEW.github.io/js/notes.js"></script>
 </body>
 
 </html>

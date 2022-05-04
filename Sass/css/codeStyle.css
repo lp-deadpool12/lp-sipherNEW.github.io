@@ -260,7 +260,7 @@ html {
 .header__input-search-lang {
   width: 100%;
   height: 32px;
-  background: url("/lp-sipherNEW.github.io/img/search.svg") 11px 50% no-repeat;
+  background: url("img/search.svg") 11px 50% no-repeat;
   background-color: rgba(0, 0, 0, 0.38);
   border-radius: 37px;
   position: relative;
