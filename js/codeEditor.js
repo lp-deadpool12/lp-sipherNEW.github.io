@@ -1,37 +1,40 @@
 'use strict'
 
+const settingsMenu = document.querySelector('.settings-menu')
+const openSettingsMenuBtn = document.querySelector(".header__settings-menu")
+const headerLangSearchMenu = document.querySelector('.header__search-lang');
+const headerLangSearchBtn = document.querySelector('.header__btn-search-lang')
+
+let tabsConunter = 1
+let getTabs = document.querySelectorAll(".tabs__item")
+let getTabsContent = document.querySelectorAll("tabs__code")
+const tabsContainer = document.querySelector('.tabs__items') 
+const tabsContentContainer = document.querySelector('.tabs__content') 
+
+function createTab() {
+  let tab = document.createElement('div')
+  tab.classList.add('tabs__item')
+  tab.setAttribute('data-tab', tabsConunter)
+  tab.innerHTML = ` untitled <div class="tab__close-cross">✕</div>`
+  tabsContainer.insertAdjacentElement('beforeend', tab)
+  tabsConunter++
+}
+
+function selectTab() { 
+  for (let i = 0; i < getTabs.length; i++) {
+     const element = getTabs[i];
+     
+     element.classList.remove('tab-active')
+
+  }
+}
+
+
 document.addEventListener('click', (e)=>{
-   let clicedElem = e.target
-   const settingsMenu = document.querySelector('.settings-menu')
-   const openSettingsMenuBtn = document.querySelector(".header__settings-menu")
-   const headerLangSearchMenu = document.querySelector('.header__search-lang');
-   const headerLangSearchBtn = document.querySelector('.header__btn-search-lang')
-   
-   let tabsConunter = 1
-   let getTabs = document.querySelectorAll("div[data-tab]")
-   let getTabsContent = document.querySelectorAll("div[data-tab-content]")
-   const tabsContainer = document.querySelector('.tabs__items') 
-   const tabsContentContainer = document.querySelector('.tabs__content') 
+  
+  let clicedElem = e.target
 
-
-   function createTab() {
-      let tab = document.createElement('div')
-      tab.classList.add('tabs__item')
-      tab.setAttribute('data-tab', tabsConunter)
-      tab.innerHTML = ` untitled <div class="tab__close-cross">✕</div>`
-      tabsContainer.insertAdjacentElement('beforeend', tab)
-      tabsConunter++
-   }
-
-   function selectTab() {
-      for (let i = 0; i < getTabs.length; i++) {
-         const element = getTabs[i];
-         
-         element.classList.remove('tab-active')
-
-      }
-   }
-
+  
    if (clicedElem == openSettingsMenuBtn || clicedElem.parentNode == openSettingsMenuBtn) {
       settingsMenu.classList.add('settings-menu-active');
    }else if(clicedElem.classList.contains('settings-menu__close-cross')){
