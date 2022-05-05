@@ -2,115 +2,129 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="Sass/css/null.css">
-    <link rel="stylesheet" href="Sass/css/codeStyle.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="Sass/css/null.css">
+  <link rel="stylesheet" href="Sass/css/codeStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <title>LP cipher</title>
+  <title>LP cipher</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="content">
-            <header class="header">
-                <div class="header__container container">
-                    <div class="header__content">
-                        <h3 class="header__title">lp cipher 1.0</h3>
-                        <div class="header__icon"><img src="img/header__icon.svg" alt=""></div>
-                        <div class="header__btns">
-                            <div class="header__search-lang">
-                                <button class="header__btn-search-lang">JavaScript</button>
-                                <div class="header__block-search-lang">
-                                    <input type="search" class="header__input-search-lang">
-                                    <ul class="header__list-search-lang">
-                                        <li class="header__lang">Python</li>
-                                        <li class="header__lang">JavaScript</li>
-                                        <li class="header__lang">CSS</li>
-                                        <li class="header__lang">Java</li>
-                                        <li class="header__lang">C++</li>
-                                        <li class="header__lang">Kotlin</li>
-                                        <li class="header__lang">MatLab</li>
-                                    </ul>
-                                    <div class="header__current-lang">current JavaScript</div>
-                                </div>
-                            </div>
-                            <button type="button" class="header__settings-menu"><span></span></button>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <section class="tabs">
-                    <div class="tabs__body">
-                        <div class="tabs__items">
-                            <div data-tab="0" class="tabs__item tab-active">
-                                untitled
-                                <div class="tab__close-cross">✕</div>
-                            </div>
-                        </div>
-                        <div data-tab-create="1" class="tab__create">+</div>
-                    </div>
-                    <div class="tabs__content">
-                        <div data-tab-content="0" class="tabs__code tabs__code-active">
-                            some code
-                        </div>
-                    </div>
-            </section>
+<div class="wrapper">
+  <div class="content">
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__content">
+          <h3 class="header__title">lp cipher 1.0</h3>
+          <div class="header__icon"><img src="img/header__icon.svg" alt=""></div>
+          <div class="header__btns">
+            <div class="header__search-lang">
+              <button class="header__btn-search-lang">JavaScript</button>
+              <div class="header__block-search-lang">
+                <input type="search" class="header__input-search-lang">
+                <ul class="header__list-search-lang">
+                  <li class="header__lang">Python</li>
+                  <li class="header__lang">JavaScript</li>
+                  <li class="header__lang">CSS</li>
+                  <li class="header__lang">Java</li>
+                  <li class="header__lang">C++</li>
+                  <li class="header__lang">Kotlin</li>
+                  <li class="header__lang">MatLab</li>
+                </ul>
+                <div class="header__current-lang">current JavaScript</div>
+              </div>
+            </div>
+            <button type="button" class="header__settings-menu"><span></span></button>
+          </div>
         </div>
-        <div class="settings-menu">
-            <div class="settings-menu__close-cross">✕</div>
-            <h3 class="settings-menu__title">Settings</h3>
-            <ul class="settings-menu__settings-list">
-                <li class="settings-menu__setting">
-                    <div class="settings-menu__icon"><img src="img/download.svg" alt=""> </div>Dowloand
-                </li>
-                <li class="settings-menu__setting">
-                    <div class="settings-menu__icon"><img src="img/save.svg" alt=""> </div>Auto save
-                </li>
-                <li class="settings-menu__setting">
-                    <div class="settings-menu__icon"><img src="img/wind1.svg" alt=""> </div>One window
-                </li>
-                <li class="settings-menu__setting">
-                    <div class="settings-menu__icon"><img src="img/wind2.svg" alt=""> </div>Two window
-                </li>
-                <li class="settings-menu__setting">
-                    <div class="settings-menu__icon"><img src="img/wind3.svg" alt=""> </div>Three windows
-                </li>
-                <li class="settings-menu__setting">
-                    <div class="settings-menu__icon"><img src="img/feedback.svg" alt=""> </div>Feеdback
-                </li>
-                <li class="settings-menu__setting">
-                    <div class="settings-menu__icon"><img src="img/save.svg" alt=""> </div>Notes
-                </li>
-                <li class="settings-menu__setting">
-                    <div class="settings-menu__icon"><img src="img/save.svg" alt=""> </div>Reminders
-                </li>
-                <li class="settings-menu__setting settings-menu__setting-translator">
-                    <div class="settings-menu__icon"><img src="img/save.svg" alt=""> </div>Translator <div
-                        class="settings-menu__expand-icon"><img src="img/extend.svg" alt=""> </div>
-                </li>
-                <li class="settings-menu__translator-wrapp">
-                    <div class="settings-menu__translator-input-wrapp">
-                        <div >
-                            <input placeholder="EN" type="text" class="settings-menu__translator-input settings-menu__translator-input-RU">
-                            <input placeholder="RU" type="text" class="settings-menu__translator-input settings-menu__translator-input-EN">
-                        </div>
-                        <div class="settings-menu__translator-reverse-lang">
-                            <img src="img/reverse-lang.svg" alt="">
-                        </div>
-                    </div>
-                    <button class="settings-menu__translator-btn">Translate</button>
-                </li>
-            </ul>
+      </div>
+    </header>
+    <div class="tabs">
+      <div class="tabs__body">
+        <div class="tabs__items">
+          <div class="tabs__item tab-active">
+            <span>untitled</span>
+            <button class="tab__close-cross">✕</button>
+          </div>
         </div>
+        <button class="tab__create">+</button>
+      </div>
+      <div class="tabs__content">
+        <div class="tabs__code tabs__code-active">
+          some code
+        </div>
+      </div>
     </div>
     <script src="js/codeEditor.js" defer type="module"></script>
     <!-- <script src="codeEditor.js" defer type="module"></script> -->
     
+  </div>
+  <div class="settings-menu">
+    <div class="settings-menu__close-cross">✕</div>
+    <h3 class="settings-menu__title">Settings</h3>
+    <ul class="settings-menu__settings-list">
+      <li class="settings-menu__setting">
+        <div class="settings-menu__icon"><img src="img/download.svg" alt=""></div>
+        Download
+      </li>
+      <li class="settings-menu__setting">
+        <div class="settings-menu__icon"><img src="img/save.svg" alt=""></div>
+        Auto save
+      </li>
+      <li class="settings-menu__setting">
+        <div class="settings-menu__icon"><img src="img/wind1.svg" alt=""></div>
+        One window
+      </li>
+      <li class="settings-menu__setting">
+        <div class="settings-menu__icon"><img src="img/wind2.svg" alt=""></div>
+        Two window
+      </li>
+      <li class="settings-menu__setting">
+        <div class="settings-menu__icon"><img src="img/wind3.svg" alt=""></div>
+        Three windows
+      </li>
+      <li class="settings-menu__setting">
+        <div class="settings-menu__icon"><img src="img/feedback.svg" alt=""></div>
+        Feedback
+      </li>
+      <li class="settings-menu__setting">
+        <div class="settings-menu__icon"><img src="img/save.svg" alt=""></div>
+        Notes
+      </li>
+      <li class="settings-menu__setting">
+        <div class="settings-menu__icon"><img src="img/save.svg" alt=""></div>
+        Reminders
+      </li>
+      <li class="settings-menu__setting settings-menu__setting-translator">
+        <div class="settings-menu__icon"><img src="img/save.svg" alt=""></div>
+        Translator
+        <div
+            class="settings-menu__expand-icon"><img src="img/extend.svg" alt=""></div>
+      </li>
+      <li class="settings-menu__translator-wrapp">
+        <div class="settings-menu__translator-input-wrapp">
+          <div>
+            <input placeholder="EN" type="text"
+                   class="settings-menu__translator-input settings-menu__translator-input-RU">
+            <input placeholder="RU" type="text"
+                   class="settings-menu__translator-input settings-menu__translator-input-EN">
+          </div>
+          <div class="settings-menu__translator-reverse-lang">
+            <img src="img/reverse-lang.svg" alt="">
+          </div>
+        </div>
+        <button class="settings-menu__translator-btn">Translate</button>
+      </li>
+    </ul>
+  </div>
+</div>
+<script src="js/codeEditor.js" defer type="module"></script>
+
 </body>
 
 </html>
