@@ -2,76 +2,80 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="Sass/css/null.css">
-    <link rel="stylesheet" href="Sass/css/notes.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-    <title>LP cipher</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="Sass/css/null.css">
+  <link rel="stylesheet" href="Sass/css/notes.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>LP cipher</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="container">
-            <!-- ! insert the header -->
-            <section class="notes">
-                <div class="notes__container">
-                    <div class="notes__menu">
-                        <input class="notes__search" type="search" placeholder="Note search">
-                        <div class="notes__list">
-                            <div data-note="0" class="notes__note">
-                                <div>
-                                    <h4 class="notes__note-name">Note</h4>
-                                    <p class="notes__last-changes">latest changes 5 minutes ago</p>
-                                </div>
-                                <button class="notes__btn-note-menu"><span></span><span></span><span></span>
-                                    <div class="notes__body-note-menu">
-                                        <ul class="notes__note-edits">
-                                            <li class="notes__note-edit">
-                                                <img src="img/n-rename.svg" alt="">
-                                                RENAME
-                                            </li>
-                                            <li class="notes__note-edit">
-                                                <img src="img/n-copy.svg" alt="">
-                                                COPY
-                                            </li>
-                                            <li class="notes__note-edit">
-                                                <img src="img/n-delete.svg" alt="">
-                                                DELETE
-                                            </li>
-                                            <li class="notes__note-edit">
-                                                <img src="img/n-features.svg" alt="">
-                                                FEATURES
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-                        <button data-note-create="1" class="notes__btn-add-note">Add new note</button>
-                    </div>
-                    <div class="notes__view">
-                        <div class="notes__view-container">
-                            <!-- <div class="notes__veiw-img">
-                                <img src="img/image 5.svg" alt="">
-                            </div> -->
-                            <div class="notes__view-notes">
-                                <div>
-                                    <div class="notes__view-title">Create Tabs</div>
-                                    <div class="notes__view-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus aspernatur, ea aperiam ad vitae, rem cupiditate voluptate asperiores ratione reprehenderit est molestias delectus pariatur suscipit. In laboriosam repudiandae hic commodi.</div>
-                                </div>
-                                <button class="notes__view-btn">Delete</button>
-                            </div>
-                        </div>
-                    </div>
+<div class="wrapper">
+  <div class="container">
+    <!-- ! insert the header -->
+    <section class="notes">
+      <div class="notes__container">
+        <div class="notes__menu">
+          <input class="notes__search" type="search" placeholder="Note search">
+          <div class="notes__list">
+            <div data-note="0" class="notes__note">
+              <div>
+                <h4 class="notes__note-name">Note</h4>
+                <p class="notes__last-changes">latest changes 5 minutes ago</p>
+              </div>
+              <button class="notes__btn-note-menu">
+                  <span></span><span></span><span></span>
+                <div class="notes__body-note-menu">
+                  <ul class="notes__note-edits">
+                    <li class="notes__note-edit">
+                      <img src="img/n-rename.svg" alt="">
+                      RENAME
+                    </li>
+                    <li class="notes__note-edit">
+                      <img src="img/n-copy.svg" alt="">
+                      COPY
+                    </li>
+                    <li class="notes__note-edit">
+                      <img src="img/n-delete.svg" alt="">
+                      DELETE
+                    </li>
+                    <li class="notes__note-edit">
+                      <img src="img/n-features.svg" alt="">
+                      FEATURES
+                    </li>
+                  </ul>
                 </div>
-            </section>
-            <script src="js/notes.js"></script>
+              </button>
+            </div>
+          </div>
+          <button data-note-create="1" class="notes__btn-add-note">Add new note</button>
         </div>
-    </div>
+        <div class="notes__view">
+          <div class="notes__view-container">
+            <!-- <div class="notes__veiw-img">
+                <img src="img/image 5.svg" alt="">
+            </div> -->
+            <div class="notes__view-notes">
+              <div>
+                <div class="notes__view-title">Create Tabs</div>
+                <div class="notes__view-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+                  aspernatur, ea aperiam ad vitae, rem cupiditate voluptate asperiores ratione reprehenderit est
+                  molestias delectus pariatur suscipit. In laboriosam repudiandae hic commodi.
+                </div>
+              </div>
+              <button class="notes__view-btn">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/notes.js"></script>
+  </div>
+</div>
 </body>
 
 </html>

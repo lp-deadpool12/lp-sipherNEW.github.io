@@ -12,7 +12,14 @@
 function $(el) {
     return document.querySelector(el)
 }
+
+function $$(el) {
+    return document.querySelector(el)
+}
+
 class Tabs {
+    // Для подщета tabs__code
+    _temp = 1
     _tabsBody
     _tabsContent
     _tabsItems
@@ -33,11 +40,15 @@ class Tabs {
         const target = event.target
         const isCreateBtn = target.classList.contains('tab__create')
         const isDeleteBtn = target.classList.contains('tab__close-cross')
+        const isChooseBtn = target.classList.contains('tabs__item') || !!target.closest('.tabs__item') && !target.classList.contains('tab__close-cross')
         if (isCreateBtn) {
             this.createTabs()
         }
         if (isDeleteBtn) {
             this.deleteTabs(event)
+        }
+        if (isChooseBtn) {
+            this.chooseTabs(event)
         }
     }
 
@@ -96,7 +107,7 @@ class Tabs {
     }
 
     // Метод для создания нового таба и текстового поля для кода
-    createTabs(event) {
+    createTabs() {
         // Создание новой вкладки
         const tabs_item = document.createElement('div')
         tabs_item.className = 'tabs__item'
@@ -119,7 +130,8 @@ class Tabs {
         // Создание нового текстового поля для кода
         const tabs_code = document.createElement('div')
         tabs_code.className = 'tabs__code'
-        tabs_code.innerText = 'some code'
+        tabs_code.innerText = `some code ${this._temp}`
+        this._temp++
 
         // Помещение нового текстового поля для кода
         this._tabsContent.insertAdjacentElement('beforeend', tabs_code)
@@ -136,7 +148,7 @@ class Tabs {
         const tabs_item_on_click = target.closest('.tabs__item')
         const tabs_item_list = [...this._tabsItem]
         const tabs_code_list = [...this._tabsCode]
-        const index_element = tabs_item_list.findIndex((e) => {
+        const index_element = +tabs_item_list.findIndex((e) => {
             return e === tabs_item_on_click
         })
         // Удаление элементов
@@ -148,6 +160,39 @@ class Tabs {
         // Изменения табов
         this._tabsItem = this.tabs.querySelectorAll('.tabs__item')
         this._tabsCode = this.tabs.querySelectorAll('.tabs__code')
+    }
+
+    //Метод для переключение табов
+    chooseTabs(event) {
+        const target = event.target
+
+        // Элемент на который нажали
+        const tabs_item_on_click = target.closest('.tabs__item')
+
+        // Получение элементов tabsItem и tabsCode
+        const tabs_item_list = [...this._tabsItem]
+        const tabs_code_list = [...this._tabsCode]
+
+        // Получение иднекса активного элемента
+        const index_element = +tabs_item_list.findIndex((e) => {
+            return e === tabs_item_on_click
+        })
+
+        // Удаление активного класса у активного элемента
+        tabs_item_list.forEach((e) =>{
+            if (e.classList.contains('tab-active')){
+                e.classList.remove('tab-active')
+            }
+        })
+        tabs_code_list.forEach((e) =>{
+            if (e.classList.contains('tabs__code-active')){
+                e.classList.remove('tabs__code-active')
+            }
+        })
+
+        // Добавление активного класса
+        tabs_item_list[index_element].classList.add('tab-active')
+        tabs_code_list[index_element].classList.add('tabs__code-active')
     }
 
 }
