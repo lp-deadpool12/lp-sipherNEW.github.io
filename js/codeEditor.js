@@ -12,51 +12,6 @@
 function $(el) {
     return document.querySelector(el)
 }
-
-const settingsMenu = document.querySelector('.settings-menu')
-const openSettingsMenuBtn = document.querySelector(".header__settings-menu")
-const headerLangSearchMenu = document.querySelector('.header__search-lang');
-const headerLangSearchBtn = document.querySelector('.header__btn-search-lang')
-
-let tabsConunter = 1
-let getTabs = document.querySelectorAll(".tabs__item")
-let getTabsContent = document.querySelectorAll("tabs__code")
-const tabsContainer = document.querySelector('.tabs__items') 
-const tabsContentContainer = document.querySelector('.tabs__content') 
-
-function createTab() {
-  let tab = document.createElement('div')
-  tab.classList.add('tabs__item')
-  tab.setAttribute('data-tab', tabsConunter)
-  tab.innerHTML = ` untitled <div class="tab__close-cross">✕</div>`
-  tabsContainer.insertAdjacentElement('beforeend', tab)
-  tabsConunter++
-}
-
-function selectTab() { 
-  for (let i = 0; i < getTabs.length; i++) {
-     const element = getTabs[i];
-     
-     element.classList.remove('tab-active')
-
-  }
-}
-
-
-document.addEventListener('click', (e)=>{
-  
-  let clicedElem = e.target
-
-  
-   if (clicedElem == openSettingsMenuBtn || clicedElem.parentNode == openSettingsMenuBtn) {
-      settingsMenu.classList.add('settings-menu-active');
-   }else if(clicedElem.classList.contains('settings-menu__close-cross')){
-      settingsMenu.classList.remove('settings-menu-active');
-   }
-function $$(el) {
-    return document.querySelectorAll(el)
-}
-
 class Tabs {
     _tabsBody
     _tabsContent
@@ -69,8 +24,8 @@ class Tabs {
     constructor(tabs) {
         this.tabErrorCheck(tabs)
         this.takeTabsElements($(`.${tabs}`))
-        this.tabs = tabs;
-        $(`.${tabs}`).addEventListener('click', this.tabsEvents.bind(this))
+        this.tabs = $(`.${tabs}`);
+        this.tabs.addEventListener('click', this.tabsEvents.bind(this))
     }
 
     // Метод для вызова событий
@@ -142,7 +97,6 @@ class Tabs {
 
     // Метод для создания нового таба и текстового поля для кода
     createTabs(event) {
-        const tabs = $(`.${this.tabs}`)
         // Создание новой вкладки
         const tabs_item = document.createElement('div')
         tabs_item.className = 'tabs__item'
@@ -171,13 +125,12 @@ class Tabs {
         this._tabsContent.insertAdjacentElement('beforeend', tabs_code)
 
         // Изменения табов
-        this._tabsItem = tabs.querySelectorAll('.tabs__item')
-        this._tabsCode = tabs.querySelectorAll('.tabs__code')
+        this._tabsItem = this.tabs.querySelectorAll('.tabs__item')
+        this._tabsCode = this.tabs.querySelectorAll('.tabs__code')
     }
 
     // Метод для удаление табов
     deleteTabs(event) {
-        const tabs = $(`.${this.tabs}`)
         const target = event.target
         // Определение констант
         const tabs_item_on_click = target.closest('.tabs__item')
@@ -193,8 +146,8 @@ class Tabs {
         }
 
         // Изменения табов
-        this._tabsItem = tabs.querySelectorAll('.tabs__item')
-        this._tabsCode = tabs.querySelectorAll('.tabs__code')
+        this._tabsItem = this.tabs.querySelectorAll('.tabs__item')
+        this._tabsCode = this.tabs.querySelectorAll('.tabs__code')
     }
 
 }

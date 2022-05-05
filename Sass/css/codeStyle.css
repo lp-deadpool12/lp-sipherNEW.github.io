@@ -9,7 +9,6 @@
   color: #fff;
   transition: 0.3s;
 }
-
 *:active {
   border: none;
 }
@@ -87,7 +86,6 @@ html {
   padding-left: 30px;
   cursor: pointer;
 }
-
 .settings-menu__setting:hover {
   background: rgba(255, 255, 255, 0.04);
 }
@@ -138,7 +136,6 @@ html {
   border-radius: 5px;
   color: rgba(255, 255, 255, 0.7);
 }
-
 .settings-menu__translator-input:focus {
   border: 0.6px solid rgba(255, 255, 255, 0.37);
 }
@@ -163,11 +160,9 @@ html {
   margin-right: 25px;
   color: #68757b;
 }
-
 .settings-menu__translator-btn:hover {
   opacity: 0.9;
 }
-
 .settings-menu__translator-btn:active {
   border: 0.6px solid #68757b;
 }
@@ -208,7 +203,6 @@ html {
   height: 55px;
   position: relative;
 }
-
 .header__menu img {
   position: absolute;
   object-fit: cover;
@@ -232,7 +226,6 @@ html {
 .header__search-lang.active .header__btn-search-lang {
   visibility: hidden;
 }
-
 .header__search-lang.active .header__block-search-lang {
   display: block;
   width: 266px;
@@ -294,7 +287,6 @@ html {
   background: none;
   cursor: pointer;
 }
-
 .header__settings-menu span, .header__settings-menu::before, .header__settings-menu::after {
   left: 0;
   position: absolute;
@@ -304,19 +296,15 @@ html {
   background-color: #d1ebe5;
   border-radius: 1px;
 }
-
 .header__settings-menu::before, .header__settings-menu::after {
   content: "";
 }
-
 .header__settings-menu::before {
   top: 0;
 }
-
 .header__settings-menu::after {
   bottom: 0;
 }
-
 .header__settings-menu span {
   top: 50%;
   transform: scale(1) translate(0px, -50%);
@@ -333,7 +321,6 @@ html {
   overflow: hidden;
   /* ползунок скроллбара */
 }
-
 .tabs__body::-webkit-scrollbar {
   width: 5px;
   /* ширина для вертикального скролла */
@@ -341,16 +328,13 @@ html {
   /* высота для горизонтального скролла */
   background: rgba(144, 144, 144, 0);
 }
-
 .tabs__body::-webkit-scrollbar-thumb {
   background: rgba(144, 144, 144, 0.3);
   border-radius: 11px;
 }
-
 .tabs__body:hover {
   overflow: auto;
 }
-
 .tabs__body .tabs__item {
   height: 50px;
   display: flex;
@@ -365,23 +349,25 @@ html {
   line-height: 22px;
   padding: 0 20px 0 20px;
 }
-
 .tabs__body .tabs__item:hover {
   opacity: 0.7;
 }
-
+.tabs__body .tabs__item span {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 .tabs__body .tabs__item .tab__close-cross {
   cursor: pointer;
   margin-left: 10px;
   user-select: none;
   background-color: transparent;
 }
-
 .tabs__body .tabs__item.tab-active {
   background-color: #072328;
   border-radius: 5px 5px 0 0;
 }
-
 .tabs__body .tab__create {
   font-size: 25px;
   line-height: 50%;
@@ -395,11 +381,9 @@ html {
   user-select: none;
   transition: 0.5s;
 }
-
 .tabs__body .tab__create:hover {
   background: #032d35;
 }
-
 .tabs__body .tab__create:active {
   border: 1px solid #03262d;
 }
@@ -411,7 +395,6 @@ html {
   overflow: hidden;
   /* ползунок скроллбара */
 }
-
 .tabs__items::-webkit-scrollbar {
   width: 5px;
   /* ширина для вертикального скролла */
@@ -419,11 +402,9 @@ html {
   /* высота для горизонтального скролла */
   background: rgba(144, 144, 144, 0);
 }
-
 .tabs__items:hover {
   overflow: auto;
 }
-
 .tabs__items::-webkit-scrollbar-thumb {
   background: rgba(144, 144, 144, 0.3);
   border-radius: 11px;
@@ -447,3 +428,5 @@ html {
 .tabs__code-active {
   display: block;
 }
+
+/*# sourceMappingURL=codeStyle.css.map */
