@@ -31,11 +31,6 @@ class Tabs {
         this.takeTabsElements($(`.${tabs}`))
         this.tabs = tabs;
         $(`.${tabs}`).addEventListener('click', this.tabsEvents.bind(this))
-        let mutationObserver = new MutationObserver(function (mutations) {
-            mutations.forEach(function (mutation) {
-                console.log(mutation);
-            });
-        });
     }
 
     // Метод для вызова событий
