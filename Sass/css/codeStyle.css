@@ -374,6 +374,7 @@ html {
   cursor: pointer;
   margin-left: 10px;
   user-select: none;
+  background-color: transparent;
 }
 
 .tabs__body .tabs__item.tab-active {

@@ -32,9 +32,8 @@
 .notes__search {
   width: 434px;
   height: 45px;
-  background: url("img/search.svg") 10px 50% no-repeat;
-  background-color: #0B181E;
-  border: 0.6px solid rgba(255, 255, 255, 0.37);
+  background: url("img/search.svg") 10px 50% no-repeat, #0B181E;
+  border: 1px solid rgba(255, 255, 255, 0.37);
   box-sizing: border-box;
   border-radius: 5px;
   padding-left: 42px;
