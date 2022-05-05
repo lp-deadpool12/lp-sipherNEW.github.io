@@ -18,7 +18,7 @@ function $$(el) {
 }
 
 class Tabs {
-    // Для подщета tabs__code
+    // Для подсчета tabs__code
     _temp = 1
     _tabsBody
     _tabsContent
