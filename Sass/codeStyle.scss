@@ -6,7 +6,6 @@
   line-height: 17px;
   letter-spacing: 0.05em;
   color: #fff;
-  transition: 0.3s;
 
   &:active {
     border: none;
@@ -220,13 +219,14 @@ html {
 .header__btn-search-lang {
   font-size: 15px;
   line-height: 18px;
-  padding: 9px 21px;
+  padding: 9px;
   margin: 0 65px;
   cursor: pointer;
-
+  width: 150px;
   background: rgba(0, 0, 0, 0.34);
   backdrop-filter: blur(10px);
   border-radius: 3px;
+  transition: visibility 0.2s linear 0s;
 }
 
 .header__search-lang.active {
@@ -248,6 +248,7 @@ html {
     border-radius: 7px;
     filter: drop-shadow(1px 0px 8px rgba(49, 163, 142, 0.03));
     backdrop-filter: blur(45px);
+    transition: all 0.2s linear 0s;
   }
 }
 
@@ -262,18 +263,20 @@ html {
 .header__input-search-lang {
   width: 100%;
   height: 32px;
-  background: url("../../img/search.svg") 11px 50% no-repeat;
-  background-color: rgba(0, 0, 0, 0.38);
+  background: url("../../img/search.svg") 11px 50% no-repeat, rgba(0, 0, 0, 0.38);
   border-radius: 37px;
   position: relative;
   padding-left: 35px;
 }
 
 .header__list-search-lang {
+  display: flex;
+  flex-direction: column;
   margin: 12px 0 8px;
 }
 
 .header__lang {
+  background-color: transparent;
   font-size: 18px;
   line-height: 22px;
   margin: 8px 0;
@@ -454,8 +457,23 @@ html {
   flex: 18;
   line-height: 24px;
   background-color: #072328;
+  counter-reset: section;
+  flex-direction: column;
+  span{
+    position: relative;
+    padding-left: 15px;
+    &::before {
+      counter-increment: section;
+      content:counter(section)".";
+      margin-right: 5px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 }
 
 .tabs__code-active {
-  display: block;
+  display: flex;
 }

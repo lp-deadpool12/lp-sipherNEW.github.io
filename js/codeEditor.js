@@ -33,6 +33,7 @@ class Tabs {
         this.takeTabsElements($(`.${tabs}`))
         this.tabs = $(`.${tabs}`);
         this.tabs.addEventListener('click', this.tabsEvents.bind(this))
+        this.tabs.addEventListener('keydown', this.tabsEvents.bind(this))
     }
 
     // Метод для вызова событий
@@ -179,13 +180,13 @@ class Tabs {
         })
 
         // Удаление активного класса у активного элемента
-        tabs_item_list.forEach((e) =>{
-            if (e.classList.contains('tab-active')){
+        tabs_item_list.forEach((e) => {
+            if (e.classList.contains('tab-active')) {
                 e.classList.remove('tab-active')
             }
         })
-        tabs_code_list.forEach((e) =>{
-            if (e.classList.contains('tabs__code-active')){
+        tabs_code_list.forEach((e) => {
+            if (e.classList.contains('tabs__code-active')) {
                 e.classList.remove('tabs__code-active')
             }
         })
@@ -195,6 +196,48 @@ class Tabs {
         tabs_code_list[index_element].classList.add('tabs__code-active')
     }
 
+
 }
 
 const tabs = new Tabs('tabs')
+
+function showLang() {
+    // Константы
+    const lang_btn = document.querySelector('.header__btn-search-lang')
+    const lang_container = document.querySelector('.header__search-lang')
+    document.body.addEventListener('click', function (e) {
+        // Удаление класса не по клику на элементы search-lang
+        if (!(e.target.classList.contains('header__search-lang') || e.target.classList.contains('header__btn-search-lang') || e.target.classList.contains('header__block-search-lang') || e.target.classList.contains('header__input-search-lang') || e.target.classList.contains('header__list-search-lang') || e.target.classList.contains('header__lang') || e.target.classList.contains('header__current-lang'))) {
+            lang_container.classList.remove('active')
+        }
+        // Добавление класса
+        if (e.target === lang_btn) {
+            lang_container.classList.add('active')
+        }
+    })
+}
+
+function selectLang() {
+    const current_lang_container = document.querySelector('.header__btn-search-lang')
+    const lang_list = [...document.querySelectorAll('.header__lang')]
+    const lang__container = document.querySelector('.header__search-lang')
+    const current_lang_hint = document.querySelector('.header__current-lang')
+    lang_list.forEach((e) =>{
+        e.addEventListener('click', function (ev){
+            current_lang_container.innerText = ev.target.innerText
+            current_lang_hint.innerText = `current ${ev.target.innerText}`
+            if (lang__container.classList.contains('active')){
+                lang__container.classList.remove('active')
+            }
+            lang_list.forEach((elem) =>{
+                if (elem.hidden){
+                    elem.hidden = false
+                }
+            })
+            ev.target.hidden = true
+        })
+    })
+}
+
+selectLang()
+showLang()
