@@ -33,7 +33,6 @@ class Tabs {
         this.takeTabsElements($(`.${tabs}`))
         this.tabs = $(`.${tabs}`);
         this.tabs.addEventListener('click', this.tabsEvents.bind(this))
-        this.tabs.addEventListener('keydown', this.tabsEvents.bind(this))
     }
 
     // Метод для вызова событий
@@ -218,22 +217,29 @@ function showLang() {
 }
 
 function selectLang() {
+    // Константы
     const current_lang_container = document.querySelector('.header__btn-search-lang')
     const lang_list = [...document.querySelectorAll('.header__lang')]
     const lang__container = document.querySelector('.header__search-lang')
     const current_lang_hint = document.querySelector('.header__current-lang')
+
+    // Обработчик события на каждый элемент
     lang_list.forEach((e) =>{
         e.addEventListener('click', function (ev){
+            // Изменение текста
             current_lang_container.innerText = ev.target.innerText
             current_lang_hint.innerText = `current ${ev.target.innerText}`
+            // Закрытие всплывашки
             if (lang__container.classList.contains('active')){
                 lang__container.classList.remove('active')
             }
+            // Убираем у всех элементов из списка hidden
             lang_list.forEach((elem) =>{
                 if (elem.hidden){
                     elem.hidden = false
                 }
             })
+            // Добавляем hidden
             ev.target.hidden = true
         })
     })
